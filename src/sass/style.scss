@@ -44,6 +44,11 @@ nav li {
     align-items: center;
 }
 
+.fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1)
+}
+
 .blue-area {
     background-color: $blue;
     padding-top: 50px;
