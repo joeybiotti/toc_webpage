@@ -2,7 +2,7 @@ const nav = document.querySelector('#main');
 const topOfNav = nav.offsetTop;
 
 function fixNav(){
-    if(window.scrollY){
+    if(window.scrollY >= topOfNav){
         document.body.style.paddingTop = nav.offsetHeight;
         document.body.classList.add('fixed-nav');
     } else {
