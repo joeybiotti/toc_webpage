@@ -1,0 +1,56 @@
+@import "_colors.scss";
+
+body {
+    background: $blue;
+    color: $red;
+}
+
+.header{
+    width: 100%;
+    background: $white;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    font-size: 80px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav{
+    background: $white;
+    top:0;
+    width: 100%;
+    margin-bottom: 75px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+nav li{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#txt-area {
+    background: $white;
+    width: 75%;
+    margin: 15px auto 25px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+p{
+    margin: 5px;
+    padding: 3px;
+}
+
+footer{
+    background: $white;
+}
