@@ -1,24 +1,23 @@
 @import "_colors.scss";
 body {
-    background: $blue;
     color: $red;
 }
 
 header {
     text-align: center;
     height: 50vh;
+    background: rgba(255, 255, 243, 0.6);
     background: url(images/chips.jpg) bottom center no-repeat;
     background-size: cover;
-    display: flex;
+    opacity: 0.7;
     align-items: center;
     justify-content: center;
 }
 
-header{
-    h1{
-        font-size: 135px;
-        color: $black;
-    }
+h1 {
+    font-size: 135px;
+    color: $red;
+    font-weight: bolder;
 }
 
 nav ul {
@@ -32,7 +31,6 @@ nav {
     background: $white;
     top: 0;
     width: 100%;
-    margin-bottom: 75px;
     height: 30px;
     position: relative;
     z-index: 1;
@@ -44,6 +42,11 @@ nav li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.blue-area {
+    background-color: $blue;
+    padding-top: 50px;
 }
 
 #txt-area {
