@@ -1,41 +1,52 @@
 @import "_colors.scss";
-
 body {
-    background: $blue;
     color: $red;
 }
 
-.header{
-    width: 100%;
-    background: $white;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    font-size: 80px;
+header {
+    text-align: center;
+    height: 50vh;
+    background: rgba(255, 255, 243, 0.6);
+    background: url(images/chips.jpg) bottom center no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul{
+h1 {
+    font-size: 135px;
+    color: $red;
+    font-weight: bolder;
+}
+
+nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
 }
 
-nav{
+nav {
     background: $white;
-    top:0;
+    top: 0;
     width: 100%;
-    margin-bottom: 75px;
     height: 30px;
     position: relative;
     z-index: 1;
 }
 
-nav li{
+nav li {
     flex: 1;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.blue-area {
+    background-color: $blue;
+    padding-top: 50px;
 }
 
 #txt-area {
@@ -46,11 +57,11 @@ nav li{
     border-radius: 10px;
 }
 
-p{
+p {
     margin: 5px;
     padding: 3px;
 }
 
-footer{
+footer {
     background: $white;
 }
