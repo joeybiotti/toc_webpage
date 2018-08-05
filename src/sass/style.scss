@@ -1,28 +1,36 @@
 @import "_colors.scss";
-
 body {
     background: $blue;
     color: $red;
 }
 
-.header{
-    width: 100%;
-    background: $white;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    font-size: 80px;
+header {
+    text-align: center;
+    height: 50vh;
+    background: url(images/chips.jpg) bottom center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul{
+header{
+    h1{
+        font-size: 135px;
+        color: $black;
+    }
+}
+
+nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
 }
 
-nav{
+nav {
     background: $white;
-    top:0;
+    top: 0;
     width: 100%;
     margin-bottom: 75px;
     height: 30px;
@@ -30,7 +38,7 @@ nav{
     z-index: 1;
 }
 
-nav li{
+nav li {
     flex: 1;
     text-align: center;
     display: flex;
@@ -46,11 +54,11 @@ nav li{
     border-radius: 10px;
 }
 
-p{
+p {
     margin: 5px;
     padding: 3px;
 }
 
-footer{
+footer {
     background: $white;
 }
