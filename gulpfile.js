@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 
 //Copy index.html from src to dist
@@ -32,10 +33,13 @@ gulp.task('imageMin', function(){
 //Scripts
 gulp.task('scripts', function(){
     gulp.src('src/scripts/*.js')
-        .pipe(concat('main.js'))
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/scripts'));
-});
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('dist/scripts'))
+})
 
 //Gulp Default
 gulp.task('default', ['copyHtml', 'sass', 'scripts', 'imageMin']);
