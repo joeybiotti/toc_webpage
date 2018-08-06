@@ -1,11 +1,12 @@
 @import "_colors.scss";
-
-body html{
+body html {
     height: 100%;
     color: $black;
+    margin: 0;
+    padding: 0;
 }
 
-.hero-image{
+.hero-image {
     background-image: url(images/chips.jpg);
     height: 50%;
     background-position: center;
@@ -13,39 +14,44 @@ body html{
     background-repeat: no-repeat;
 }
 
-.hero-text{
+.hero-text {
     text-align: center;
     position: relative;
     top: 50%;
-    color: $black;
+    color: $red;
+    text-shadow: 0 1.25px $black;
 }
 
-.hero-text h1{
-    font-size: 75px;
+.hero-text h1 {
+    font-size: 85px;
+    font-weight: bold;
 }
 
 .hero-text p {
     font-size: 25px;
+    font-weight: normal;
 }
 
-.nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-.nav {
-    background: $red;
+nav {
+    background: $white;
     top: 0;
     width: 100%;
-    height: 30px;
+    margin: 0 auto;
+    height: 50px;
     padding: 14px 16px;
     position: relative;
     z-index: 1;
 }
 
-.nav li {
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
     flex: 1;
     text-align: center;
     display: flex;
@@ -53,24 +59,35 @@ body html{
     align-items: center;
 }
 
-.nav a {
+nav a {
     text-decoration: none;
-    font-size: 25px;
+    padding: 20px;
+    display: inline-block;
+    color: $blue;
+    transition: all 0.2;
+    text-transform: uppercase;
 }
 
-.nav a:hover{
+nav a .icons{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav a:hover {
     color: $red;
     text-decoration: none;
 }
 
-.fixed-nav nav{
+.fixed-nav nav {
     position: fixed;
-    box-shadow: 0 5px rgba(0, 0, 0, 0.1)
+    box-shadow: $box-shadow;
 }
 
 .blue-area {
     background-color: $blue;
     padding-top: 50px;
+    border-radius: $border-radius;
 }
 
 #txt-area {
@@ -78,7 +95,8 @@ body html{
     width: 75%;
     margin: 15px auto 25px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow
 }
 
 p {
