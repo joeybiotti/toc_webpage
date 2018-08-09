@@ -43,6 +43,28 @@ body html {
     text-shadow: 0 1.25px $black;
 }
 
+.hero-text p{
+    animation: fadein 1s linear;
+    animation-fill-mode: both;
+}
+
+.hero-text p:nth-child(1) {animation-delay: 0.5s;}
+.hero-text p:nth-child(2) {animation-delay: 1.5s;}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        transform: scale(.1);
+    }
+    85%{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .hero-text p {
     font-size: 45px;
     font-weight: normal;
