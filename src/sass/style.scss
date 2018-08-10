@@ -1,5 +1,6 @@
 @import "_colors.scss";
 @import "_fonts.scss";
+
 body html {
     height: 100%;
     color: $black;
@@ -18,16 +19,21 @@ body html {
     text-shadow: 0 2px $black;
 }
 
-.line{
+.hero{
     width: 100%;
     background-color: $blue;
-    padding: 5px;
+    padding: 15px;
+    margin: auto;
+    border-radius: $border-radius
 }
 
 .hero-image {
     background-image: url(images/chips.jpg);
     height: 250px;
-    width: 100%;
+    width: 95%;
+    margin: auto;
+    border-radius: $border-radius;
+    background-color: $blue;
     background-position: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,7 +83,7 @@ nav {
     top: 0;
     width: 100%;
     margin: 0 auto;
-    height: 50px;
+    height: 55px;
     padding: 14px 16px;
     position: relative;
     z-index: 1;
@@ -92,7 +98,6 @@ nav ul {
 }
 
 nav li {
-    flex: 1;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -102,16 +107,17 @@ nav li {
 nav a {
     text-decoration: none;
     padding: 20px;
-    display: inline-block;
+    display: flex;
     color: $blue;
     transition: all 0.2;
     text-transform: uppercase;
 }
 
-nav a .icons {
-    display: inline-block;
+.icons {
+    display: flex;
     font-weight: 700;
     font-size: 20px;
+    //margin-left: 400px;
 }
 
 nav a:hover {
@@ -133,7 +139,7 @@ li.logo {
 }
 
 .fixed-nav li.logo {
-    max-width: 500px;
+    max-width: 1500px;
     margin-left: 6px;
 }
 
