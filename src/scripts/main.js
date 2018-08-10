@@ -29,3 +29,19 @@ const cycleImages = (images, container, step) => {
 }
 
 cycleImages(images, hero, 3000);
+
+//Secret Code
+const pressed = [];
+const secretCode = 'chips';
+
+window.addEventListener('keyup', (e) =>{
+    console.log(e);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
+
+    if(pressed.join('').includes(secretCode)){
+        console.log('we ❤️ chips!');
+        cornify_add();
+    }
+    console.log(pressed);
+})
