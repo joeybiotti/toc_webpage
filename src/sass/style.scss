@@ -56,7 +56,9 @@ body html {
     font-family: $header-font2;
 }
 
-/* Hero font fade in */
+/*****************
+Hero font fade in
+******************/
 .hero-text p{
     animation: fadein 1s linear;
     animation-fill-mode: both;
@@ -177,6 +179,68 @@ p {
     margin: 5px;
     padding: 3px;
 }
+
+/***********
+Secret Modal
+************/
+//The modal
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+//The modal content
+.modal-content{
+    background-color: $flatBlack;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid $black;
+    width: 80%;
+    box-shadow: $box-shadow;
+    animation-name: modalFade;
+    animation-duration: .5s;
+}
+
+//Modal text
+#modal-text{
+    font-size: 100px;
+    margin: auto;
+    color: $white;
+    font-family: $header-font2;
+}
+
+//Close btn
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+//Close btn (hoover, focus)
+.close:hover{
+    .close:focus{
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+//Modal keyframes
+@keyframes modalFade{
+    from {top: -300px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
 
 footer {
     background: $white;
