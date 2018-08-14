@@ -185,7 +185,7 @@ Secret Modal
 ************/
 //The modal
 #modal{
-    //display: none;
+    display: none;
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -208,6 +208,13 @@ Secret Modal
     box-shadow: $box-shadow;
 }
 
+//Modal text
+#modal-text{
+    font-size: 25px;
+    margin: auto;
+}
+
+//Close btn
 .close{
     color: #aaa;
     float: right;
@@ -215,6 +222,7 @@ Secret Modal
     font-weight: bold;
 }
 
+//Close btn (hoover, focus)
 .close:hover{
     .close:focus{
         color: #000;
