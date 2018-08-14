@@ -30,7 +30,7 @@ const cycleImages = (images, container, step) => {
 
 cycleImages(images, hero, 3000);
 
-//Secret Code
+//Secret Code-- opens modal
 const pressed = [];
 const secretCode = 'chips';
 
@@ -41,10 +41,26 @@ window.addEventListener('keyup', (e) =>{
 
     if(pressed.join('').includes(secretCode)){
         activateSecretArea();
-    }
+    };
     console.log(pressed);
 
     function activateSecretArea(){
         const secretArea = document.querySelector('#modal');
-    }
+        const close = document.querySelector('.close');
+
+        //Modal opens if the user enters the secret code
+        secretArea.style.display = 'block';
+
+        //Modal closes when user clicks the "x"
+        close.onclick = ()=> {
+            secretArea.style.display = 'none';
+        };
+
+        //If user clicks the modal, modal closes
+        window.onclick = ()=> {
+            if(event.target == secretArea){
+                secretArea.style.display = 'none';
+            };
+        };
+    };
 })
