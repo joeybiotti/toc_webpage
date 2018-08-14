@@ -45,13 +45,6 @@ window.addEventListener('keyup', (e) =>{
     console.log(pressed);
 
     function activateSecretArea(){
-        const secretArea = document.querySelector('.secret');
-        secretArea.innerHTML = `
-                            <div id="modal">
-                                <div class="modal-content">
-                                    <span class="close">&times;</span>
-                                    <p>We ❤️ Chips.</p>
-                                </div>
-                            </div`;
+        const secretArea = document.querySelector('#modal');
     }
 })

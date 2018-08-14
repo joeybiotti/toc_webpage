@@ -56,7 +56,9 @@ body html {
     font-family: $header-font2;
 }
 
-/* Hero font fade in */
+/*****************
+Hero font fade in
+******************/
 .hero-text p{
     animation: fadein 1s linear;
     animation-fill-mode: both;
@@ -177,6 +179,10 @@ p {
     margin: 5px;
     padding: 3px;
 }
+
+/***********
+Secret Modal
+************/
 
 footer {
     background: $white;
