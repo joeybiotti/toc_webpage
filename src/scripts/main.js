@@ -40,8 +40,18 @@ window.addEventListener('keyup', (e) =>{
     pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
 
     if(pressed.join('').includes(secretCode)){
-        console.log('we ❤️ chips!');
-        cornify_add();
+        activateSecretArea();
     }
     console.log(pressed);
+
+    function activateSecretArea(){
+        const secretArea = document.querySelector('.secret');
+        secretArea.innerHTML = `
+                            <div id="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>We ❤️ Chips.</p>
+                                </div>
+                            </div`;
+    }
 })
