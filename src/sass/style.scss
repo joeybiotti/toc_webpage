@@ -24,13 +24,12 @@ body html {
     background-color: $blue;
     padding: 15px;
     margin: auto;
-    border-radius: $border-radius
 }
 
 .hero-image {
     background-image: url(images/chips.jpg);
     height: 250px;
-    width: 95%;
+    width: 100%;
     margin: auto;
     border-radius: $border-radius;
     background-color: $blue;
@@ -180,6 +179,11 @@ p {
     padding: 3px;
 }
 
+.chip-aisle{
+    width: 100% \9;
+    height: auto;
+}
+
 /***********
 Secret Modal
 ************/
@@ -216,6 +220,7 @@ Secret Modal
     margin: auto;
     color: $white;
     font-family: $header-font2;
+    text-shadow: 1.75px 1.5px $red;
 }
 
 //Close btn
@@ -229,7 +234,7 @@ Secret Modal
 //Close btn (hoover, focus)
 .close:hover{
     .close:focus{
-        color: $black;
+        color: $red;
         text-decoration: none;
         cursor: pointer;
     }
