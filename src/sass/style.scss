@@ -200,18 +200,22 @@ Secret Modal
 
 //The modal content
 .modal-content{
-    background-color: $white;
+    background-color: $flatBlack;
     margin: auto;
     padding: 20px;
-    border: 1px solid $white;
+    border: 1px solid $black;
     width: 80%;
     box-shadow: $box-shadow;
+    animation-name: modalFade;
+    animation-duration: .5s;
 }
 
 //Modal text
 #modal-text{
-    font-size: 25px;
+    font-size: 100px;
     margin: auto;
+    color: $white;
+    font-family: $header-font2;
 }
 
 //Close btn
@@ -225,11 +229,18 @@ Secret Modal
 //Close btn (hoover, focus)
 .close:hover{
     .close:focus{
-        color: #000;
+        color: $black;
         text-decoration: none;
         cursor: pointer;
     }
 }
+
+//Modal keyframes
+@keyframes modalFade{
+    from {top: -300px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
 
 footer {
     background: $white;
