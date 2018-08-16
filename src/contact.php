@@ -1,3 +1,45 @@
+<?php
+
+require("/Users/joeybb/Workspace/freelance/t_o_c_v2/vendor/phpmailer/phpmailer/src/PHPMailer.php");
+
+
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+
+$msg = '';
+
+//Don't run unless submission
+if (array_key_exists('email', $_POST)) {
+    date_default_timezone_set('Etc/UTC');
+    require("/Users/joeybb/Workspace/freelance/t_o_c_v2/vendor/autoload.php");
+
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->isSMTP();
+    $mail->Host = 'localhost';
+    $mail->Port = 25;
+
+    $mail->setFrom('test@example.com', 'First Last');
+    $mail->addAddress('thoughtsonchips@gmail.com', 'Admin');
+
+    if($mail->addReplyTo($_POST['email'], $_POST['name'])){
+        $mail->Subject = 'PHPMailer contact form';
+        $mail->isHTML(false);
+        $mail->Body = <<<EOT
+    Email: {$_POST['email']}
+    Name: {$_POST['name']}
+    Message: {$_POST['message']}
+EOT;
+    }
+    if (!$mail->send()) {
+        $msg = 'Sorry, something went wrong. Please try again later.';
+    } else {
+        $msg = 'Message sent! Thanks for contacting us.';
+    }
+} else {
+    $msg = 'Invalid email address, message ignored.';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,10 +76,18 @@
     <div class="container">
         <div class="blue-area">
             <div id="txt-area">
-                <h3 class="text-center ">Contact Us!</h3>
-                <p class="text-center">Ideas? Compliments? Complaints? Concerns? We want to hear them all!</p>
-                <p class="text-center">Check us out in Instagram, Twitter or send us a good old fashioned <a href="mailto:thoughtsonchips@gmail.com">email</a>.</p>
-                <p class="text-center">There's a million chips out there, and we need your help so we can try them all!</p>
+            <h3>Contact Us!</h3>
+
+            <?php if (empty($msg)) {
+                echo "<h2>$msg</h2>";
+            } ?>
+
+            <form method="POST">
+                <label for="name">Name: <input type="text" name="name" id="name"></label><br>
+                <label for="email">Email address: <input type="email" name="email" id="email"></label><br>
+                <label for="message">Message: <textarea name="message" id="message" rows="8" cols="20"></textarea></label><br>
+                <input type="submit" value="Send">
+            </form>
             </div>
         </div>
     </div>
