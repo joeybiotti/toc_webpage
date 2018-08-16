@@ -5,6 +5,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
+const cleanCSS = require('gulp-clean-css');
 
 //Copy index.html from src to dist
 gulp.task('copyHtml', function(){
@@ -12,7 +13,7 @@ gulp.task('copyHtml', function(){
         .pipe(gulp.dest('./dist/'));
 });
 
-//Gulp Sass
+//Gulp Sass, Autoprefixer, Clean CSS (Minify)
 gulp.task('sass', function(){
     gulp.src(['src/sass/*.scss'])
         .pipe(sass())
@@ -20,6 +21,7 @@ gulp.task('sass', function(){
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(cleanCSS())
         .pipe(gulp.dest('./dist'));
 });
 
