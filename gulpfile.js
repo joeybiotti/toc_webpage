@@ -6,10 +6,11 @@ const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css');
+const sourceFiles = ['src/*.html', 'src/*php']
 
 //Copy index.html from src to dist
 gulp.task('copyHtml', function(){
-    gulp.src('./src/*.html')
+    gulp.src(sourceFiles)
         .pipe(gulp.dest('./dist/'));
 });
 
