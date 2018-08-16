@@ -35,7 +35,7 @@
         <div class="blue-area">
             <div id="txt-area">
                 <h3 class="text-center ">Contact Us!</h3>
-                <form action="">
+                <form action="mailto:thoughtsonchips@gmail.com?subject=Email from the website">
                     <div class="form-group">
                         <input type="text" class="form-control" id="form-name" placeholder="Name:">
                     </div>
@@ -45,8 +45,8 @@
                     <div class="form-group">
                         <textarea class="form-control" name="email-body" rows="5" placeholder="Let us know what's on your mind."></textarea>
                     </div>
-                    <a href="mailto:thoughtsonchips@gmail.com" class="btn btn-success">Send</a>
-                    <button id="clear-btn" class="btn btn-danger">Cancel</button>
+                    <a href="#" class="btn btn-success">Send</a>
+                    <a id="clear-btn" class="btn btn-danger">Cancel</a>
                 </form>
             </div>
         </div>
@@ -56,3 +56,10 @@
 </body>
 
 </html>
+
+<?php
+
+if($_POST["message"]) {
+    mail("thoughtsonchips@gmail.com", "Form to email", $_POST["message"], "From: test@email.com");
+}
+?>
