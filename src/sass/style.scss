@@ -90,7 +90,7 @@ Hero font fade in
 
 
 nav {
-    background: white;
+    background: $navBlue;
     top: 0;
     width: 100%;
     margin: 0 auto;
@@ -119,7 +119,7 @@ nav a {
     text-decoration: none;
     padding: 20px;
     display: flex;
-    color: $blue;
+    color: $white;
     transition: all 0.2;
     text-transform: uppercase;
 }
@@ -137,7 +137,7 @@ nav a:hover {
 li.logo {
     max-width: 0;
     overflow: hidden;
-    background: white;
+    background: $navBlue;
     transition: all 1s;
     font-size: 25px;
 }
@@ -148,9 +148,9 @@ li.logo {
 }
 
 li.logo a {
-    color: $red;
+    color: $yellow;
     font-family: $header-font;
-    text-shadow: 0 1px $grey;
+    text-shadow: 0 1px $red;
 }
 
 nav .logo a:hover{
@@ -164,10 +164,11 @@ nav .logo a:hover{
     border-radius: $border-radius;
     padding-bottom: 35px;
     margin-bottom: 75px;
+    margin-top: 25px;
 }
 
 #txt-area {
-    background: $white;
+    background: #ffffff;
     width: 75%;
     margin: 15px auto 25px;
     padding: 10px;
