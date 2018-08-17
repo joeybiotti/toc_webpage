@@ -14,7 +14,7 @@ body html {
     font-weight: bold;
     margin: auto;
     font-family: $header-font;
-    color: $red;
+    color: $blue;
     padding: 15px;
     text-align: center;
     text-shadow: 0 2px $grey;
@@ -24,10 +24,10 @@ body html {
     width: 100%;
     padding: 5px;
     margin: auto;
-    background-image: url(images/chips.jpg);
     height: 565px;
     width: 100%;
     margin: auto;
+    background-image: url("images/chip2.png");
     background-position: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@ body html {
     position: relative;
     top: 25%;
     bottom: 25%;
-    color: $red;
+    color: $blue;
     text-shadow: 0 1.25px $grey;
 }
 
@@ -47,9 +47,17 @@ body html {
     font-size: 65px;
     font-weight: normal;
     margin: auto;
-    margin-top: 5%;
     font-family: $header-font;
 }
+
+.hero ul li{
+    display: inline-block;
+    text-decoration: none;
+    margin: auto;
+    font-size: 45px;
+}
+
+
 
 /*****************
 Hero font fade in
@@ -57,6 +65,10 @@ Hero font fade in
 .hero-text p{
     animation: fadein 1s linear;
     animation-fill-mode: both;
+}
+
+.hero ul li{
+    animation: fadein 1s linear;
 }
 
 .hero-text p:nth-child(1) {animation-delay: 0.5s;}
@@ -82,7 +94,7 @@ nav {
     top: 0;
     width: 100%;
     margin: 0 auto;
-    height: 55px;
+    height: 65px;
     padding: 14px 16px;
     position: relative;
     z-index: 1;
@@ -110,13 +122,6 @@ nav a {
     color: $blue;
     transition: all 0.2;
     text-transform: uppercase;
-}
-
-.icons {
-    display: flex;
-    font-weight: 700;
-    font-size: 20px;
-    //margin-left: 400px;
 }
 
 nav a:hover {
@@ -241,7 +246,6 @@ Secret Modal
     from {top: -300px; opacity: 0;}
     to {top: 0; opacity: 1;}
 }
-
 
 footer {
     background: $white;

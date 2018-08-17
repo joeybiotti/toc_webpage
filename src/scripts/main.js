@@ -15,7 +15,7 @@ function fixNav(){
 window.addEventListener('scroll', fixNav);
 
 //Change Hero Image Background
-// const images = ['images/chips.jpg', 'images/pringles.jpg', 'images/ruffles.jpg']; //images are placeholders for now.
+// const images = ['images/chip2.png']; //images are placeholders for now.
 
 // const hero = document.querySelector('.hero-image');
 
@@ -23,6 +23,11 @@ window.addEventListener('scroll', fixNav);
 //     images.forEach((image, index) =>(
 //         setTimeout(() =>{
 //             container.style.backgroundImage = `url(${image})`
+//             container.style.backgroundSize = 'cover'
+//             container.style.backgoundPosition = 'center'
+//             container.style.display = 'block'
+//             container.style.height = '100%'
+//             container.style.width = '100%'
 //         }, step * (index + 1))
 //     ))
 //     setTimeout(() => cycleImages(images, container, step), step * images.length)
