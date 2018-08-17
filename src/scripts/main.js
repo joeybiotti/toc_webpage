@@ -15,20 +15,20 @@ function fixNav(){
 window.addEventListener('scroll', fixNav);
 
 //Change Hero Image Background
-const images = ['images/chips.jpg', 'images/pringles.jpg', 'images/ruffles.jpg']; //images are placeholders for now.
+// const images = ['images/chips.jpg', 'images/pringles.jpg', 'images/ruffles.jpg']; //images are placeholders for now.
 
-const hero = document.querySelector('.hero-image');
+// const hero = document.querySelector('.hero-image');
 
-const cycleImages = (images, container, step) => {
-    images.forEach((image, index) =>(
-        setTimeout(() =>{
-            container.style.backgroundImage = `url(${image})`
-        }, step * (index + 1))
-    ))
-    setTimeout(() => cycleImages(images, container, step), step * images.length)
-}
+// const cycleImages = (images, container, step) => {
+//     images.forEach((image, index) =>(
+//         setTimeout(() =>{
+//             container.style.backgroundImage = `url(${image})`
+//         }, step * (index + 1))
+//     ))
+//     setTimeout(() => cycleImages(images, container, step), step * images.length)
+// }
 
-cycleImages(images, hero, 3000);
+// cycleImages(images, hero, 3000);
 
 //Secret Code-- opens modal
 const pressed = [];
