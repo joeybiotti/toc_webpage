@@ -120,15 +120,15 @@ nav a {
     text-decoration: none;
     padding: 20px;
     display: flex;
-    color: $white;
+    color: $yellow;
     transition: all 0.2;
     text-transform: uppercase;
+    text-shadow: .25px .25px $red;
 }
 
 nav a:hover {
-    color: $yellow;
+    color: $red;
     text-decoration: none;
-    text-shadow: .25px .25px $red;
 }
 
 .fixed-nav nav {
