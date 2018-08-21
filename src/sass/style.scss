@@ -67,8 +67,9 @@ Hero font fade in
     animation-fill-mode: both;
 }
 
-.hero ul li{
+.hero-text ul li a{
     animation: fadein 1s linear;
+    animation-fill-mode: both;
 }
 
 .hero-text p:nth-child(1) {animation-delay: 0.5s;}
@@ -125,8 +126,9 @@ nav a {
 }
 
 nav a:hover {
-    color: $red;
+    color: $yellow;
     text-decoration: none;
+    text-shadow: .25px .25px $red;
 }
 
 .fixed-nav nav {
@@ -157,6 +159,13 @@ nav .logo a:hover{
     color: $blue;
     text-shadow: 0 1px $red;
 }
+
+nav .icons{
+    font-size: 25px;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
 
 .blue-area {
     background-color: $blue;
