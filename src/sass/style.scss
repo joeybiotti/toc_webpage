@@ -67,8 +67,9 @@ Hero font fade in
     animation-fill-mode: both;
 }
 
-.hero ul li{
+.hero-text ul li a{
     animation: fadein 1s linear;
+    animation-fill-mode: both;
 }
 
 .hero-text p:nth-child(1) {animation-delay: 0.5s;}
@@ -90,7 +91,7 @@ Hero font fade in
 
 
 nav {
-    background: white;
+    background: $navBlue;
     top: 0;
     width: 100%;
     margin: 0 auto;
@@ -119,9 +120,10 @@ nav a {
     text-decoration: none;
     padding: 20px;
     display: flex;
-    color: $blue;
+    color: $yellow;
     transition: all 0.2;
     text-transform: uppercase;
+    text-shadow: .25px .25px $red;
 }
 
 nav a:hover {
@@ -137,7 +139,7 @@ nav a:hover {
 li.logo {
     max-width: 0;
     overflow: hidden;
-    background: white;
+    background: $navBlue;
     transition: all 1s;
     font-size: 25px;
 }
@@ -148,9 +150,9 @@ li.logo {
 }
 
 li.logo a {
-    color: $red;
+    color: $yellow;
     font-family: $header-font;
-    text-shadow: 0 1px $grey;
+    text-shadow: 0 1px $red;
 }
 
 nav .logo a:hover{
@@ -158,16 +160,24 @@ nav .logo a:hover{
     text-shadow: 0 1px $red;
 }
 
+nav .icons{
+    font-size: 25px;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+
 .blue-area {
     background-color: $blue;
     padding-top: 50px;
     border-radius: $border-radius;
     padding-bottom: 35px;
     margin-bottom: 75px;
+    margin-top: 25px;
 }
 
 #txt-area {
-    background: $white;
+    background: #ffffff;
     width: 75%;
     margin: 15px auto 25px;
     padding: 10px;
