@@ -176,7 +176,7 @@ nav .icons{
     margin-top: 25px;
 }
 
-#txt-area {
+.txt-area {
     background: #ffffff;
     width: 75%;
     margin: 15px auto 25px;
@@ -258,9 +258,21 @@ Secret Modal
 }
 
 footer {
-    background: $white;
     padding: 35px 35px;
-    background-color: $blue;
-    color: $white;
+    background-color: $navBlue;
+    color: $yellow;
     font-size: 20px;
 }
+
+footer ul li{
+    text-decoration: none;
+    display: inline;
+}
+
+footer .icons{
+    font-size: 35px;
+    color: $yellow;
+    float: right;
+    justify-content: center;
+}
+
